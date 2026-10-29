@@ -36,6 +36,11 @@ include '../includes/cabecalho.php';
                     <td><?php echo $produto['altura']; ?> × <?php echo $produto['largura']; ?> × <?php echo $produto['comprimento']; ?></td>
                     <td>
                         <a href="form.php?id=<?php echo $produto['id']; ?>" class="btn btn-sm btn-outline-secondary">Editar</a>
+                        <form action="excluir.php" method="post" class="d-inline"
+      onsubmit="return confirm('Tem certeza que deseja excluir este produto?');">
+    <input type="hidden" name="id" value="<?php echo $produto['id']; ?>">
+    <button type="submit" class="btn btn-sm btn-outline-danger">Excluir</button>
+</form>
                     </td>
                 </tr>
             <?php endforeach; ?>
