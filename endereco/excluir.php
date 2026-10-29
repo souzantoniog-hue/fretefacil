@@ -5,7 +5,7 @@ require '../config/conexao.php';
 $id = $_POST['id'];
 
 // 2. Apagar do banco
-$stmt = $pdo->prepare("DELETE FROM produto WHERE id = ?");
+$stmt = $pdo->prepare("DELETE FROM transportador WHERE id = ?");
 $stmt->execute([$id]);
 
 // 3. Voltar para a lista
