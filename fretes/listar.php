@@ -43,7 +43,7 @@ include '../includes/cabecalho.php';
                     <tr>
                         <td><?php echo $frete['id']; ?></td>
                         <td><?php echo date('d/m/Y', strtotime($frete['data'])); ?></td>
-                        <td><?php echo $frete['transportador']; ?></td>
+                        <td><?php echo $frete['tranportador']; ?></td>
                         <td><?php echo $frete['cidade_origem']; ?> → <?php echo $frete['cidade_destino']; ?></td>
                         <td><?php echo $frete['itens']; ?> produto(s)</td>
                         <td>R$ <?php echo number_format($frete['valor'], 2, ',', '.'); ?></td>
