@@ -41,9 +41,7 @@ include '../includes/cabecalho.php';
                     <?php endforeach; ?>
                 </select>
             </div>
-
-            <!-- SEU DESAFIO: o select de DESTINO vai aqui -->
-                      <div class="col-md-6">
+            <div class="col-md-6">
                 <label for="id_destino" class="form-label">Destino <span class="text-danger">*</span></label>
                 <select id="id_destino" name="id_destino" class="form-select" required>
                     <option value="">Selecione o endereço de entrega</option>
@@ -54,8 +52,8 @@ include '../includes/cabecalho.php';
                     <?php endforeach; ?>
                 </select>
             </div>
-
-        <div class="row">
+        </div> 
+               <div class="row">
             <div class="col-md-4">
                 <label for="data" class="form-label">Data <span class="text-danger">*</span></label>
                 <input type="date" id="data" name="data" class="form-control" required value="<?php echo date('Y-m-d'); ?>">
@@ -73,8 +71,7 @@ include '../includes/cabecalho.php';
                 </select>
             </div>
         </div>
-    </div>
-
+    </div>         
     <!-- PARTE 2: produtos do frete -->
     <div class="card p-4 mb-3">
         <h5>2. Produtos do frete</h5>
@@ -110,5 +107,6 @@ include '../includes/cabecalho.php';
     </div>
 
 </form>
+<script src="/fretefacil/assets/js/frete.js"></script>
 
 <?php include '../includes/rodape.php'; ?>
