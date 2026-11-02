@@ -10,6 +10,11 @@ include '../includes/cabecalho.php';
     <h1>Endereços</h1>
     <a href="form.php" class="btn text-white" style="background-color: #5b3fa0;">+ Novo endereço</a>
 </div>
+<?php if (isset($_GET['erro'])): ?>
+    <div class="alert alert-danger">
+        Não é possível excluir este enderço porque ele já está em um frete.
+    </div>
+<?php endif; ?>
 
 <?php if (count($enderecos) == 0): ?>
 

@@ -10,6 +10,11 @@ include '../includes/cabecalho.php';
     <h1>Produtos</h1>
     <a href="form.php" class="btn text-white" style="background-color: #5b3fa0;">+ Novo produto</a>
 </div>
+<?php if (isset($_GET['erro'])): ?>
+    <div class="alert alert-danger">
+        Não é possível excluir este produto porque ele já está em um frete.
+    </div>
+<?php endif; ?>
 
 <?php if (count($produtos) == 0): ?>
 
