@@ -4,9 +4,9 @@ require '../config/conexao.php';
 $id = $_POST['id'];
 
 try {
-    $stmt = $pdo->prepare("DELETE FROM endereço WHERE id = ?");
+    $stmt = $pdo->prepare("DELETE FROM endereco WHERE id = ?");
     $stmt->execute([$id]);
-    header('Location: listar.php');
+     header('Location: listar.php');
 } catch (PDOException $e) {
     header('Location: listar.php?erro=1');
 }
