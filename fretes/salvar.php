@@ -13,7 +13,8 @@ $quantidades      = $_POST['quantidades'];   // lista com as quantidades
 
 // Regra de negócio: origem e destino não podem ser o mesmo endereço
 if ($id_origem == $id_destino) {
-    die('A origem e o destino precisam ser diferentes. <a href="novo.php">Voltar</a>');
+    header('Location: novo.php?erro=origem');
+    exit;
 }
 
 // 2. Gravar no banco (tudo ou nada)

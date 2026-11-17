@@ -12,6 +12,11 @@ include '../includes/cabecalho.php';
 <a href="listar.php">← Voltar para fretes</a>
 <h1 class="mt-2">Gerar novo frete</h1>
 <p class="text-muted">Campos com <span class="text-danger">*</span> são obrigatórios.</p>
+<?php if (isset($_GET['erro'])): ?>
+    <div class="alert alert-danger">
+        A origem e o destino precisam ser diferentes.
+    </div>
+<?php endif; ?>
 
 <form action="salvar.php" method="post" style="max-width: 900px;">
 
